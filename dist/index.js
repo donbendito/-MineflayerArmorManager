@@ -2,6 +2,7 @@
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+var isDisabled = false
 const minecraft_data_1 = __importDefault(require("minecraft-data"));
 const isArmor_1 = require("./lib/isArmor");
 const equipItem_1 = require("./lib/equipItem");
@@ -17,6 +18,12 @@ const initializeBot = (bot, options) => {
             equipItem_1.equipItem(bot, item.type);
         }
     };
+    bot.armorManager.disable = function () {
+        isDisabled = true;
+    };
+    bot.armorManager.enable = function () {
+        isDisabled = false;
+    };
     let versionData;
     if (bot.version) {
         versionData = minecraft_data_1.default(bot.version);
@@ -26,6 +33,7 @@ const initializeBot = (bot, options) => {
         versionData = minecraft_data_1.default(bot.version);
     });
     bot.on("playerCollect", function onPlayerCollect(collector, item) {
+        if (isDisabled) return
         if (collector.username !== bot.username) {
             return;
         }
