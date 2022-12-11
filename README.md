@@ -1,10 +1,6 @@
 # ArmorManager
 
-Plugin for [MineFlayer](https://github.com/PrismarineJS/mineflayer), that makes bot automatically equip better armor.
-
-# Demonstration
-
-![Footage](/footage.gif)
+Plugin for [MineFlayer](https://github.com/PrismarineJS/mineflayer), that makes bot automatically equip better armor. Added extra features for more customizability 
 
 ## Installing
 
