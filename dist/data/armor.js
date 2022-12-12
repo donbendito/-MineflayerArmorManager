@@ -21,7 +21,4 @@ exports.materials = [
     "netherite",
 ];
 /** Ranked list of offhand materials from worst to best */
-exports.offhandMaterials = [
-    "shield",
-    "totem_of_undying"
-];
+exports.offhandMaterials = [];
