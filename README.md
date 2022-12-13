@@ -37,6 +37,8 @@ bot.loadPlugin(armorManager);
 To the best possible equipment in the bot's inventory:
 ```js
 bot.armorManager.equipAll()
+bot.armorManager.enable()
+bot.armorManager.disable()
 ```
 
 ## License
